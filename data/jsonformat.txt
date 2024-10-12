@@ -1,0 +1,13 @@
+The JSON format is encoded as follows, in utf-8-sig encoding, name refers to book name:
+[
+	{
+	"abbrev" : "abbrev"
+	"name" : "name"
+	"chapters": 
+		[
+			["Verse 1", "Verse 2", "Verse 3", "..."],
+			["Verse 1", "Verse 2", "Verse 3", "..."],
+			["Verse 1", "Verse 2", "Verse 3", "..."]
+		]
+	}
+]
