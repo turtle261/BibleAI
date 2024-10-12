@@ -35,6 +35,3 @@ The Optimized FOSS Bible AI is an advanced, memory-optimized AI-powered tool for
 
 ## License
 This project is licensed under the GNU General Public License v3.0. See the LICENSE file for more details.
-
-## Contributing
-Contributions are welcome! Please fork the repository and submit a pull request with your changes.
