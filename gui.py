@@ -51,7 +51,7 @@ class BibleAIGUI(QWidget):
     def __init__(self):
         super().__init__()
         self.conversation_id = None
-        self.setWindowTitle("Optimized FOSS Bible AI")
+        self.setWindowTitle("Bible AI")
         self.setGeometry(100, 100, 1000, 600)
         self.setup_ui()
         self.threadpool = QThreadPool()

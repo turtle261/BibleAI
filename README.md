@@ -3,12 +3,6 @@
 ## Overview
 The Optimized FOSS Bible AI is an advanced, memory-optimized AI-powered tool for Bible study. It uses a FastAPI backend with the Ollama inference engine to provide relevant Bible verses and facilitate conversations with a language model. It uses semantic search to retrieve relevant verses, and a language model to generate answers, using the context of the conversation and the retrieved verses. 
 
-## Features
-- Retrieve relevant Bible verses using semantic search.
-- Generate comprehensive answers to user questions using a language model.
-- Manage conversation history for context-aware interactions.
-- Memory-optimized for efficient performance.
-
 ## Installation
 1. Clone the repository:
    ```bash
