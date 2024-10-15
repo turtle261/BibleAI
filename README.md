@@ -15,7 +15,7 @@ The Optimized FOSS Bible AI is an advanced, memory-optimized AI-powered tool for
    pip install -r requirements.txt
    ```
 
-3. Ensure Ollama is installed and available in your PATH.
+3. Ensure Ollama is installed and run `ollama serve`
 
 ## Usage
 1. Start the FastAPI server:
@@ -23,9 +23,7 @@ The Optimized FOSS Bible AI is an advanced, memory-optimized AI-powered tool for
     python main.py
    ```
 
-2. Access the API at `http://localhost:8000`.
-
-3. Use the `/query` endpoint to interact with the AI.
+2. Access the API at `http://localhost:8000`. `python gui.py`
 
 ## License
 This project is licensed under the GNU General Public License v3.0. See the LICENSE file for more details.
