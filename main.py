@@ -484,10 +484,26 @@ class BibleAgent:
         self.index = None
         self.bible_data = []
         self.greek_data = {}
+        self._initialized = False
+        self._initializing = False
+
+    async def initialize(self):
+        """Initialize the agent asynchronously."""
+        if self._initialized or self._initializing:
+            return
         
-        # Initialize data asynchronously
-        asyncio.create_task(self._initialize_data())
-        
+        self._initializing = True
+        try:
+            await self._initialize_data()
+            self._initialized = True
+        finally:
+            self._initializing = False
+
+    async def ensure_initialized(self):
+        """Ensure the agent is initialized before processing queries."""
+        if not self._initialized:
+            await self.initialize()
+
     async def _initialize_data(self):
         """Initialize data asynchronously to improve startup time."""
         try:
@@ -905,12 +921,12 @@ app.add_middleware(
 
 @app.on_event("startup")
 async def startup_event():
-    # Setup semantic search after server starts
-    await agent._setup_semantic_search()
+    await agent.initialize()
 
 @app.post("/query", response_model=ResponseResult)
 async def query_bible_ai(q: Query):
     try:
+        await agent.ensure_initialized()
         answer, verses, conv_id, thoughts = await agent.process_query(
             q.question,
             q.conversation_id,
@@ -951,4 +967,14 @@ async def get_progress():
 
 if __name__ == "__main__":
     import uvicorn
+    import asyncio
+    
+    # Create event loop
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
+    
+    # Initialize agent
+    loop.run_until_complete(agent.initialize())
+    
+    # Run the server
     uvicorn.run(app, host=settings.HOST, port=settings.PORT, workers=settings.WORKERS)
