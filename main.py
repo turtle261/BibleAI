@@ -463,24 +463,23 @@ class BibleAgent:
         # Book abbreviation to full name mapping
         self.book_names = {
             'gn': 'Genesis', 'ex': 'Exodus', 'lv': 'Leviticus', 'nm': 'Numbers',
-            'dt': 'Deuteronomy', 'js': 'Joshua', 'jg': 'Judges', 'rt': 'Ruth',
-            '1sm': '1 Samuel', '2sm': '2 Samuel', '1ki': '1 Kings', '2ki': '2 Kings',
-            '1ch': '1 Chronicles', '2ch': '2 Chronicles', 'ez': 'Ezra', 'nh': 'Nehemiah',
-            'et': 'Esther', 'job': 'Job', 'ps': 'Psalms', 'pr': 'Proverbs',
-            'ec': 'Ecclesiastes', 'sg': 'Song of Solomon', 'is': 'Isaiah',
+            'dt': 'Deuteronomy', 'js': 'Joshua', 'jud': 'Judges', 'rt': 'Ruth',
+            '1sm': '1 Samuel', '2sm': '2 Samuel', '1kgs': '1 Kings', '2kgs': '2 Kings',
+            '1ch': '1 Chronicles', '2ch': '2 Chronicles', 'ezr': 'Ezra', 'ne': 'Nehemiah',
+            'et': 'Esther', 'job': 'Job', 'ps': 'Psalms', 'prv': 'Proverbs',
+            'ec': 'Ecclesiastes', 'so': 'Song of Solomon', 'is': 'Isaiah',
             'jr': 'Jeremiah', 'lm': 'Lamentations', 'ez': 'Ezekiel', 'dn': 'Daniel',
-            'hs': 'Hosea', 'jl': 'Joel', 'am': 'Amos', 'ob': 'Obadiah', 'jn': 'Jonah',
-            'mc': 'Micah', 'nm': 'Nahum', 'hk': 'Habakkuk', 'zp': 'Zephaniah',
+            'ho': 'Hosea', 'jl': 'Joel', 'am': 'Amos', 'ob': 'Obadiah', 'jn': 'Jonah',
+            'mi': 'Micah', 'na': 'Nahum', 'hk': 'Habakkuk', 'zp': 'Zephaniah',
             'hg': 'Haggai', 'zc': 'Zechariah', 'ml': 'Malachi', 'mt': 'Matthew',
             'mk': 'Mark', 'lk': 'Luke', 'jo': 'John', 'act': 'Acts', 'rm': 'Romans',
             '1co': '1 Corinthians', '2co': '2 Corinthians', 'gl': 'Galatians',
-            'ep': 'Ephesians', 'ph': 'Philippians', 'cl': 'Colossians',
-            '1ts': '1 Thessalonians', '2ts': '2 Thessalonians', '1m': '1 Timothy',
-            '2m': '2 Timothy', 'tt': 'Titus', 'pm': 'Philemon', 'hb': 'Hebrews',
+            'eph': 'Ephesians', 'ph': 'Philippians', 'cl': 'Colossians',
+            '1ts': '1 Thessalonians', '2ts': '2 Thessalonians', '1tm': '1 Timothy',
+            '2tm': '2 Timothy', 'tt': 'Titus', 'phm': 'Philemon', 'hb': 'Hebrews',
             'jm': 'James', '1pe': '1 Peter', '2pe': '2 Peter', '1jo': '1 John',
-            '2jo': '2 John', '3jo': '3 John', 'jud': 'Jude', 'rv': 'Revelation'
+            '2jo': '2 John', '3jo': '3 John', 'jd': 'Jude', 're': 'Revelation'
         }
-        
         self.index = None
         self.bible_data = []
         self.greek_data = {}
