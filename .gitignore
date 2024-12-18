@@ -1,2 +1,4 @@
 data/embeddings/
 __pycache__/
+logs/
+data/settings.json
